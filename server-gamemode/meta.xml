@@ -1,0 +1,4 @@
+<meta>
+    <script src = "c_gamemode.lua" type="client" />
+    <script src = "s_gamemode.lua" type="server" />
+</meta>

@@ -1,0 +1,15 @@
+
+    setAmbientSoundEnabled( "gunfire", false )
+    setOcclusionsEnabled(true)
+    setFarClipDistance(1000)
+    setMinuteDuration(10000)
+    setWindVelocity(0.2, 0.2, 0.2)
+    setCloudsEnabled(false)
+    setCameraViewMode(3, 3)
+    setFogDistance(500)	
+    setMoonSize(5)
+    setHeatHaze(0)
+    setSunSize(5)
+    setCameraFieldOfView("player", 90)
+    setFPSLimit(32767)
+
