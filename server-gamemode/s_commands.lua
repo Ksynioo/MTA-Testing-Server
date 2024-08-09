@@ -111,7 +111,7 @@ function repairVeh(player, vehicle)
 	outputChatBox("ERROR: You need a vehicle to repair", player, 255, 255, 255)
 	end
 end
-addCommandHandler("repair", repairVeh,)
+addCommandHandler("repair", repairVeh)
 
 
 --[[Get Player Coords]]--
@@ -149,7 +149,7 @@ function teleportToPos(player, command, x, y, z)
 		local position = getElementPosition(player, x, y, z)
 			setElementPosition(player, x, y, z)
 end
-addCommandHandler("tp", teleportToPos, true, false)
+addCommandHandler("tp", teleportToPos)
 
 
 --[[Set Player Interior]]--
