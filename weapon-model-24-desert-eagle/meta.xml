@@ -1,0 +1,5 @@
+<meta>
+	<file src="deagle.txd" />
+	<file src="deagle.dff" />
+	<script src="client.lua" type="client" />
+	</meta>
