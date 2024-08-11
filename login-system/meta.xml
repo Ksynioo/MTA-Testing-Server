@@ -1,5 +1,0 @@
-<meta>
-    <script src ="c_login.lua" type="client" />
-    <script src ="s_login.lua" type="server" />
-    <file src = "font/RobotoBold.ttf" />
-</meta>

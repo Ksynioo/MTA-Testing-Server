@@ -1,8 +1,19 @@
 <meta>
+
 <!--Client Scripts-->
     <script src = "c_gamemode.lua" type="client" />
-    <script src = "c_commands.lua" type="client" />    
+    <script src = "c_commands.lua" type="client" /> 
+    <script src ="c_login.lua" type="client" />   
+
 <!--Server Scripts-->
     <script src = "s_commands.lua" type="server" />
     <script src = "s_gamemode.lua" type="server" />
+    <script src ="s_login.lua" type="server" />
+
+<!--Script Files-->
+    <file src = "font/RobotoBold.ttf" />
+    
 </meta>
+
+    
+    
