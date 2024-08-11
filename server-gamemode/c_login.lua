@@ -79,3 +79,4 @@ function onLoginClick ()
 	end
 end
 addEventHandler("onClientGUIClick",loginButton,onLoginClick,false)
+

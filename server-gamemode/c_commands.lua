@@ -137,19 +137,6 @@ addCommandHandler("window",
 			outputChatBox( "You must be in vehicle!" )
 		end
 	end
-)
-
-
---[[Set Player Skin]]--
-function setSkinCommand(cmd, skin)
-	skin = skin and math.floor(tonumber(skin))
-	if skin then
-		setElementModel(localPlayer,skin)
-	else
-		outputChatBox("ERROR: Syntax for this command is: /skin [skinID]" , id, 255, 0, 0)
-	end
-end
-addCommandHandler('skin', setSkinCommand, true, false)
 
 
 --[[Set Player Drunk Level]]--

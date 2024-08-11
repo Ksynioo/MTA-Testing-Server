@@ -61,6 +61,20 @@ function removeWeapon(player)
 end
 addCommandHandler ( "rweapon", removeWeapon)
 
+--[[Set Player Skin]]--
+function setSkinCommand(player, cmd, skin)
+    skin = skin and tonumber(skin)
+    if getElementModel(player) == skin or isPedDead(player) then
+        return
+    end
+    if skin and skin <= 99999 then
+        setElementModel(player, skin)
+    else
+        outputChatBox("ERROR: Syntax for this command is: /skin [skinID]", player, 255, 0, 0)
+    end
+end
+addCommandHandler("skin", setSkinCommand)
+
 
 --[[Flip Occupied Vehicle]]--
 function flipVehicle(player, vehicle)
@@ -185,6 +199,28 @@ function timeSet(player, command, hour, minute)
 end
 
 addCommandHandler("timeset", timeSet, true, false)
+
+--[[Give Player Money]]--
+function moneyGive(player, moneyID, command)
+    if player then
+        local money = getPlayerMoney(player)
+        givePlayerMoney(player, moneyID)
+    else
+        outputChatBox("Player is not online, or call function failed.", player)
+    end
+end
+addCommandHandler("givecash", moneyGive, true, false)
+
+--[[Set Player Money]]--
+function moneySet(player, command,moneyID)
+    if player then
+        local money = getPlayerMoney(player)
+        setPlayerMoney(player, tonumber(moneyID))
+    else
+        outputChatBox("Player is not online, or call function failed.", player)
+    end
+end
+addCommandHandler("setmoney", moneySet, true, false)
 
 
 --[[Set Weather]]--
