@@ -1,0 +1,5 @@
+<meta>
+    <script src = "c_phone.lua" type = "client" />
+    <file src = "img/phone.dds" />
+    <file src = "img/back.dds" />
+</meta>
