@@ -136,7 +136,7 @@ addCommandHandler("window",
 		else
 			outputChatBox( "You must be in vehicle!" )
 		end
-	end
+	end)
 
 
 --[[Set Player Drunk Level]]--
@@ -151,8 +151,7 @@ addCommandHandler( "drunk",
 			setCameraDrunkLevel(0)
 			destroyElement(drink)
         end
-    end
-)
+    end)
 
 
 --[[Set Vehicle Paintjob]]--

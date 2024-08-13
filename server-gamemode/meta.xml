@@ -4,6 +4,7 @@
     <script src = "c_gamemode.lua" type="client" />
     <script src = "c_commands.lua" type="client" /> 
     <script src ="c_login.lua" type="client" />   
+    <script src ="c_hud.lua" type="client" />   
 
 <!--Server Scripts-->
     <script src = "s_commands.lua" type="server" />
