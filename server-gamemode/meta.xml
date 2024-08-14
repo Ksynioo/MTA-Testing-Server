@@ -13,7 +13,8 @@
     <script src ="s_account_data.lua" type="server" />
 
 <!--Script Files-->
-    <file src = "font/RobotoBold.ttf" />
+    <file src = "img/heart.dds" />
+    <file src = "img/armor.dds" />
 
 </meta>
 

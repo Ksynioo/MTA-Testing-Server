@@ -222,6 +222,17 @@ function moneySet(player, command,moneyID)
 end
 addCommandHandler("setmoney", moneySet, true, false)
 
+function revivePlayer(source, command)
+    local health = getElementHealth(source)
+    setElementHealth(source,100)
+end
+addCommandHandler("revive", revivePlayer, true, false)
+
+function giveArmorToPlayer(source, command)
+    local armor = getPedArmor(source)
+    setPedArmor(source,100)
+end
+addCommandHandler("armor", giveArmorToPlayer, true, false)
 
 --[[Set Weather]]--
 function weather(weatherID)
