@@ -7,7 +7,8 @@ local number = 1
 local hunger = getElementData(localPlayer, "food")
 local thirst = getElementData(localPlayer, "thirst")
 local stamina = getElementData(localPlayer,"stamina")
-local HUDcomponents={    {"ammo","armour","clock","health","money","weapon","wanted","breath", "area_name", "vehicle_name"}   }
+
+local HUDcomponents = {    {"ammo","armour","clock","health","money","weapon","wanted","breath", "area_name", "vehicle_name"}   }
 
 function hideOriginalHUD()
     for i=1, #HUDcomponents[1] do
@@ -51,6 +52,13 @@ function createHud()
     dxDrawCircle(sx*(445/1920), sy*(800/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
     dxDrawImage(sx*(432/1920), sy*(789/1080), sx*(24/1920), sy*(24/1080), "img/stamina.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
     
+    --Weapon
+    local weapon = getPedWeapon(localPlayer)
+    dxDrawText("Current Weapon:  "..getWeaponNameFromID(weapon), sx*(225/1920), sy*(2010/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Current Weapon:  "..getWeaponNameFromID(weapon), sx*(225/1920), sy*(2010/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Ammo:  ".."1 / "..getPedTotalAmmo(localPlayer)-getPedAmmoInClip(localPlayer), sx*(225/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Ammo:  ".."1 / "..getPedTotalAmmo(localPlayer)-getPedAmmoInClip(localPlayer), sx*(225/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+
 end
 addEventHandler("onClientRender",root, createHud)
 
