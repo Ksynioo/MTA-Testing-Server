@@ -1,0 +1,13 @@
+<meta>
+<!--Client Scripts-->
+    <script src ="c_login.lua" type="client" />   
+
+<!--Server Scripts-->
+    <script src ="s_login.lua" type="server" />
+
+<!--Script Files-->
+    <file src = "font/RobotoBold.ttf" />
+</meta>
+
+    
+    

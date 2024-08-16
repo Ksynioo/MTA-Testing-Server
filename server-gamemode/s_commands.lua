@@ -9,7 +9,7 @@ function createVehicleCommand0 ( thePlayer, commandName, vehicleName )
         warpPedIntoVehicle(thePlayer, vehicle)
     end
 end
-addCommandHandler ( "car", createVehicleCommand0)
+addCommandHandler ( "car", createVehicleCommand0, true, false)
 
 
 --[[Create Vehicle by Name]]--
@@ -23,7 +23,7 @@ function createVehicleCommand1 ( thePlayer, commandName, vehicleID )
         warpPedIntoVehicle(thePlayer, vehicle)
     end
 end
-addCommandHandler ( "car", createVehicleCommand1)
+addCommandHandler ( "car", createVehicleCommand1, true, false)
 
 
 --[[Remove Vehicle]]--
@@ -35,16 +35,9 @@ function destroyvehicle (player)
         outputChatBox ( "ERROR: You need a vehicle!", player, 255, 0, 0, true)
     end
 end
-addCommandHandler("dv", destroyvehicle)
+addCommandHandler("dv", destroyvehicle, true, false)
 
 
---[[Remove the radar when command destroys vehicle]]--
-addEventHandler ( "onPlayerCommand", root, 
-    function (command)
-        if(command =="dv") then
-        setPlayerHudComponentVisible ( source, "radar", false )
-    end
-end)
 
 
 --[[Give the weapon by Weapon Name]]--
@@ -52,14 +45,14 @@ function weaponGive(source, command, weaponID, ammo)
         local weapon = getWeaponIDFromName(weaponID)
 		giveWeapon(source,weaponID, ammo, true)
 end
-addCommandHandler("weapon", weaponGive)
+addCommandHandler("weapon", weaponGive, true, false)
 
 
 --[[Remove All Weapons]]--
 function removeWeapon(player)
     takeAllWeapons(player)
 end
-addCommandHandler ( "rweapon", removeWeapon)
+addCommandHandler ( "rweapon", removeWeapon, true, false)
 
 --[[Set Player Skin]]--
 function setSkinCommand(player, cmd, skin)
@@ -73,7 +66,7 @@ function setSkinCommand(player, cmd, skin)
         outputChatBox("ERROR: Syntax for this command is: /skin [skinID]", player, 255, 0, 0)
     end
 end
-addCommandHandler("skin", setSkinCommand)
+addCommandHandler("skin", setSkinCommand, true, false)
 
 
 --[[Flip Occupied Vehicle]]--
@@ -84,7 +77,7 @@ function flipVehicle(player, vehicle)
 		setElementRotation(vehicle, 0, 0, (rX > 90 and rX < 270) and (rZ + 180) or rZ)
 	end
 end
-addCommandHandler('flip', flipVehicle)
+addCommandHandler('flip', flipVehicle, true, false)
 
 
 --[[Vehicle God Mode]]--
@@ -95,7 +88,7 @@ function toggle_veh_godmode(player)
 		outputChatBox("Your car is damage proof", player, 255 ,255, 255)	
 	end
 end
-addCommandHandler("vgod", toggle_veh_godmode)
+addCommandHandler("vgod", toggle_veh_godmode, true, false)
 
 
 --[[Vehicle Lock Doors]]--
@@ -125,7 +118,7 @@ function repairVeh(player, vehicle)
 	outputChatBox("ERROR: You need a vehicle to repair", player, 255, 255, 255)
 	end
 end
-addCommandHandler("repair", repairVeh)
+addCommandHandler("repair", repairVeh, true, false)
 
 
 --[[Get Player Coords]]--
@@ -134,7 +127,7 @@ function GetPosition ( player )
     local rx, ry, rz = getElementRotation(player)
  outputConsole("Pos: "..x..", "..y..", "..z.."\nRotation: "..rx..", "..ry..", "..rz) 
 end 
-addCommandHandler ( "coords", GetPosition) 
+addCommandHandler ( "coords", GetPosition, true, false) 
 
 
 
@@ -163,7 +156,7 @@ function teleportToPos(player, command, x, y, z)
 		local position = getElementPosition(player, x, y, z)
 			setElementPosition(player, x, y, z)
 end
-addCommandHandler("tp", teleportToPos)
+addCommandHandler("tp", teleportToPos, true, false)
 
 
 --[[Set Player Interior]]--
@@ -225,6 +218,8 @@ addCommandHandler("setmoney", moneySet, true, false)
 function revivePlayer(source, command)
     local health = getElementHealth(source)
     setElementHealth(source,100)
+    setElementData(source, "thirst", 100)
+    setElementData(source, "food", 100)
 end
 addCommandHandler("revive", revivePlayer, true, false)
 
@@ -239,28 +234,28 @@ function weather(weatherID)
 	setWeather(0)
 	outputChatBox("Changed server weather to: EXTRASUNNY LA!",source,  255, 255, 255) 
 end
-addCommandHandler("weather.extrasunny",weather)
+addCommandHandler("weather.extrasunny",weather, true, false)
 	
 function weather(weatherID)
 	setWeather(1)
 	outputChatBox("Changed server weather to: SUNNY LA!")
 end
-addCommandHandler("weather.sunny",weather)
+addCommandHandler("weather.sunny",weather, true, false)
 	
 function weather(weatherID)
 	setWeather(4)
 	outputChatBox("Changed server weather to: CLOUDY LA!")
 end
-addCommandHandler("weather.cloudy",weather)
+addCommandHandler("weather.cloudy",weather, true, false)
 	
 function weather(weatherID)
 	setWeather(8)
 	outputChatBox("Changed server weather to: RAINY LA!")
 end
-addCommandHandler("weather.rainy",weather)
+addCommandHandler("weather.rainy",weather, true, false)
 	
 function weather(weatherID)
 	setWeather(9)
 	outputChatBox("Changed server weather to: FOGGY LA!")
 end
-addCommandHandler("weather.foggy",weather)
+addCommandHandler("weather.foggy",weather, true, false)
