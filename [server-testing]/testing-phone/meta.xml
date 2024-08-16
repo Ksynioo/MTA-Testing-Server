@@ -1,5 +1,15 @@
 <meta>
+<!--Client Scripts-->
     <script src = "c_phone.lua" type = "client" />
-    <file src = "img/phone.dds" />
-    <file src = "img/back.dds" />
+
+<!--Server Scripts-->
+
+<!--Script Files-->
+    <file src = "img/phone.jpg" />
+    <file src = "img/back.jpg" />
+    <file src = "img/contacts.jpg" />
+    <file src = "img/messages.jpg" />
+    <file src = "img/appstore.jpg" />
+    <file src = "img/gmail.jpg" />
+    <file src = "font/font.ttf" />
 </meta>
