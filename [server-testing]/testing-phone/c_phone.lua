@@ -7,9 +7,9 @@ addEventHandler("onClientResourceStart", resourceRoot,
     guiSetVisible(phone,false)
 
     contacts = guiCreateStaticImage(18, 55, 48, 48  , "img/contacts.jpg", false, phone)
-    contacts = guiCreateStaticImage(73, 55, 48, 48  , "img/messages.jpg", false, phone)
-    contacts = guiCreateStaticImage(128, 55, 48, 48  , "img/appstore.jpg", false, phone)
-    contacts = guiCreateStaticImage(183, 55, 48, 48  , "img/gmail.jpg", false, phone)
+    messages = guiCreateStaticImage(73, 55, 48, 48  , "img/messages.jpg", false, phone)
+    appstore = guiCreateStaticImage(128, 55, 48, 48  , "img/appstore.jpg", false, phone)
+    gmail = guiCreateStaticImage(183, 55, 48, 48  , "img/gmail.jpg", false, phone)
 
     label1 = guiCreateLabel(165, 15, 246,30, "lllll", false, phone)
 			guiSetFont(label1, font)
