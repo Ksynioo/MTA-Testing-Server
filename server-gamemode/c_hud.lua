@@ -23,16 +23,12 @@ function createHud()
     dxDrawCircle(sx*(80/1920), sy*(800/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
     dxDrawImage(sx*(68/1920), sy*(789/1080), sx*(24/1920), sy*(24/1080), "img/heart.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
     
-    --dxDrawRectangle ( sx*(40/1920), sy*(800/1080), sx*(50/1920), sy*(-50/1080), tocolor ( 0, 0, 0, 255 ) ) -- this is rectangular version
-    --dxDrawRectangle ( sx*(45/1920), sy*(795/1080), sx*(40/1920), sy*(40/1080/(-100)*getElementHealth(localPlayer)), tocolor ( 255, 0, 0, 255 ) ) -- this is rectangular version
 
     --Armor
     dxDrawCircle(sx*(130/1920), sy*(740/1080), 20, 0, 3.6*getPedArmor(localPlayer), tocolor(0, 0, 255, 255))
     dxDrawCircle(sx*(130/1920), sy*(740/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
     dxDrawImage(sx*(118/1920), sy*(728/1080), sx*(24/1920), sy*(24/1080), "img/armor.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
-    --dxDrawRectangle ( sx*(40/1920), sy*(860/1080), sx*(50/1920), sy*(-50/1080), tocolor ( 0, 0, 0, 255 ) ) -- this is rectangular version
-    --dxDrawRectangle ( sx*(45/1920), sy*(865/1080), sx*(40/1920), sy*(40/1080/(-100)*getPedArmor(localPlayer)), tocolor ( 0, 255, 0, 255 ) ) -- this is rectangular version
 
     --Hunger
     dxDrawCircle(sx*(201/1920), sy*(700/1080), 20, 0, (getElementData(localPlayer,"food")) / 100 * 360, tocolor(150, 75, 0, 255))
@@ -158,7 +154,7 @@ end
 addCommandHandler("drink", drink)
 
 
--- This provides Hunger and Thirst to not go under 0 
+-- This provides Hunger and Thirst to not go above 100 
 function fixData()
 	local thirst = getElementData(localPlayer, "thirst")
 	local hunger = getElementData(localPlayer, "food")
@@ -177,7 +173,7 @@ addEventHandler("onClientRender", root,
         if getElementHealth(localPlayer) <= 5 then
             toggleAllControls(false)
             
-			dxDrawImage(sx*(0/1920),sy*(0/1080), sx*(1920/1920), sy*(1080/1080), "img/bloodscreen.png", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+			dxDrawImage(sx*(0/1920),sy*(0/1080), sx*(1920/1920), sy*(1080/1080), "img/bloodscreen.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
 			dxDrawText("NIEPRZYTOMNY",sx*(960/1920), sy*(850/1080), sx*(960/1920), sy*(850/1080), tocolor(255, 255, 255, 255), 2, 2, "default-bold", "center", "center", false, false, false, false, false)
 
