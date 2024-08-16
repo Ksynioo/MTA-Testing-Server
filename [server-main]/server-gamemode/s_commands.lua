@@ -230,32 +230,11 @@ end
 addCommandHandler("armor", giveArmorToPlayer, true, false)
 
 --[[Set Weather]]--
-function weather(weatherID)
-	setWeather(0)
-	outputChatBox("Changed server weather to: EXTRASUNNY LA!",source,  255, 255, 255) 
+function changeWeather(player, command, weatherID)
+	if (not weatherID or not tonumber(weatherID)) then
+		outputChatBox("You must enter a valid weather ID number", player, 0, 0, 0)
+		return false
+	end
+	setWeather(weatherID)
 end
-addCommandHandler("weather.extrasunny",weather, true, false)
-	
-function weather(weatherID)
-	setWeather(1)
-	outputChatBox("Changed server weather to: SUNNY LA!")
-end
-addCommandHandler("weather.sunny",weather, true, false)
-	
-function weather(weatherID)
-	setWeather(4)
-	outputChatBox("Changed server weather to: CLOUDY LA!")
-end
-addCommandHandler("weather.cloudy",weather, true, false)
-	
-function weather(weatherID)
-	setWeather(8)
-	outputChatBox("Changed server weather to: RAINY LA!")
-end
-addCommandHandler("weather.rainy",weather, true, false)
-	
-function weather(weatherID)
-	setWeather(9)
-	outputChatBox("Changed server weather to: FOGGY LA!")
-end
-addCommandHandler("weather.foggy",weather, true, false)
+addCommandHandler("weather", changeWeather, true, false)

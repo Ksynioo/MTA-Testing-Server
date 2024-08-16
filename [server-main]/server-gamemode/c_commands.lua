@@ -145,7 +145,7 @@ addCommandHandler( "drunk",
         local level = math.floor( level )
         if level and level > 1 and level <= 255 then
             setCameraDrunkLevel( level )
-			setPedWalkingStyle(localPlayer, 124)
+			setPedWalkingStyle(localPlayer, 126)
         else
 			setPedWalkingStyle(localPlayer,0)
 			setCameraDrunkLevel(0)
