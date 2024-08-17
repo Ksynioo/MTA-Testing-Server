@@ -194,10 +194,10 @@ end
 addCommandHandler("timeset", timeSet, true, false)
 
 --[[Give Player Money]]--
-function moneyGive(player, moneyID, command)
+function moneyGive(player, command, moneyID)
     if player then
         local money = getPlayerMoney(player)
-        givePlayerMoney(player, moneyID)
+        givePlayerMoney(player, tonumber(moneyID))
     else
         outputChatBox("Player is not online, or call function failed.", player)
     end

@@ -1,12 +1,14 @@
 setElementData(localPlayer, "food", 100)
 setElementData(localPlayer, "thirst", 100)
 setElementData(localPlayer,"stamina",100)
+setElementData(localPlayer, "bankaccount", 0)
 
 local sx, sy = guiGetScreenSize ( )
 local number = 1
 local hunger = getElementData(localPlayer, "food")
 local thirst = getElementData(localPlayer, "thirst")
 local stamina = getElementData(localPlayer,"stamina")
+local bankaccount = getElementData(localPlayer, "bankaccount")
 
 local HUDcomponents = {    {"ammo","armour","clock","health","money","weapon","wanted","breath", "area_name", "vehicle_name"}   }
 
@@ -59,6 +61,16 @@ function createHud()
     dxDrawText("Ammo:  ".."1 / "..getPedTotalAmmo(localPlayer)-getPedAmmoInClip(localPlayer), sx*(225/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
     dxDrawText("Ammo:  ".."1 / "..getPedTotalAmmo(localPlayer)-getPedAmmoInClip(localPlayer), sx*(225/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
 
+    --Cash
+    local money = getPlayerMoney(localPlayer)
+    dxDrawText("Cash:  $"..money, sx*(800/1920), sy*(2010/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Cash:  $"..money, sx*(800/1920), sy*(2010/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+
+    --Bank Money
+    dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+
+    
 end
 addEventHandler("onClientRender",root, createHud)
 
