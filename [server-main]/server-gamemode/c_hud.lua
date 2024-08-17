@@ -70,6 +70,35 @@ function createHud()
     dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
     dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
 
+    --Speedometer & Gears
+    local vehicle = getPedOccupiedVehicle(localPlayer)
+    if (vehicle) then
+        local speedX, speedY, speedZ = getElementVelocity (vehicle)
+        local actualSpeed = (speedX^2 + speedY^2 + speedZ^2)^(0.5) 
+        local speed = math.floor(actualSpeed*180)	
+        local x, y, z = getElementPosition(localPlayer)
+        local zoneName = getZoneName(x, y, z)
+        local currentGear  = getVehicleCurrentGear(vehicle)
+
+        dxDrawCircle(sx*(500/1920), sy*(950/1080), sx*(25/1920), 0, 360, tocolor(0, 0, 0, 100))
+        dxDrawCircle(sx*(500/1920), sy*(950/1080), sx*(20/1920), 0, 360, tocolor(0, 95, 106, 100))
+        dxDrawImage(sx*(489/1920), sy*(940/1080), sx*(24/1920), sy*(24/1080), "img/fuel.jpg", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+
+        dxDrawCircle(sx*(460/1920), sy*(890/1080), sx*(45/1920), 0, 360, tocolor(0, 0, 0, 100))
+        dxDrawCircle(sx*(460/1920), sy*(890/1080), sx*(40/1920), 0, 360, tocolor(150, 150, 150, 100))
+
+        dxDrawText(speed.." \nKM/H", sx*(-430/1920), sy*(1040/1080), sx*(1350/1920), sy*(735/1080), tocolor(254, 254, 254, 255), sx*(0.80/1920), "bankgothic", "center", "center", false, false, false, false, false)
+        if zoneName then
+            dxDrawRectangle(sx*(680/1920), sy*(1010/1080), sx*(485/1920), sy*(50/1080), tocolor(0, 0, 0, 100), false)
+            dxDrawRectangle(sx*(685/1920), sy*(1015/1080), sx*(475/1920), sy*(40/1080), tocolor(100, 100, 100, 100), false)
+            dxDrawText(zoneName.."", sx*(650/1920), sy*(1455/1080), sx*(1194/1920), sy*(612/1080), tocolor(255, 255, 255, 255), sx*(1.00/1920), "bankgothic", "center", "center", false, false, false, false, false)
+        end
+        if currentGear then
+            dxDrawCircle(sx*(420/1920), sy*(950/1080), sx*(25/1920), 0, 360, tocolor(0, 0, 0, 100))
+            dxDrawCircle(sx*(420/1920), sy*(950/1080), sx*(20/1920), 0, 360, tocolor(150, 150, 150, 100))
+            dxDrawText(currentGear.."", sx*(-352/1920), sy*(1287/1080), sx*(1194/1920), sy*(612/1080), tocolor(255, 255, 255, 255), sx*(1.00/1920), "bankgothic", "center", "center", false, false, false, false, false)
+        end
+    end
     
 end
 addEventHandler("onClientRender",root, createHud)
