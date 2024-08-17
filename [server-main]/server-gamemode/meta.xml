@@ -11,13 +11,13 @@
     <script src ="s_account_data.lua" type="server" />
 
 <!--Script Files-->
-    <file src = "img/health.dds" />
-    <file src = "img/armor.dds" />
-    <file src = "img/hunger.dds" />
-    <file src = "img/thirst.dds" />
-    <file src = "img/oxygen.dds" />
-    <file src = "img/stamina.dds" />
-    <file src = "img/bloodscreen.dds" />
+    <file src = "img/health.jpg" />
+    <file src = "img/armor.jpg" />
+    <file src = "img/hunger.jpg" />
+    <file src = "img/thirst.jpg" />
+    <file src = "img/oxygen.jpg" />
+    <file src = "img/stamina.jpg" />
+    <file src = "img/bloodscreen.jpg" />
     <file src = "img/fuel.jpg" />
 </meta>
 

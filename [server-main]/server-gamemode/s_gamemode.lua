@@ -1,6 +1,6 @@
 function onPlayerConnect()
     fadeCamera(source,true)
-    setCameraMatrix(source, 0, 0, 50, 0, 0, 50)
+    setCameraMatrix(source, 1400.677734375, -989.0478515625, 65.039848327637, 1400.677734375, -989.0478515625, 65.039848327637)
 end
 addEventHandler ( "onPlayerJoin", root, onPlayerConnect  )
 
