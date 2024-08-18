@@ -1,6 +1,6 @@
 <meta>
     <script src = "handling.lua" type ="server" />
     <script src = "client.lua" type ="client" />
-    <file src="BMW_X7.txd" />
-    <file src="BMW_X7.dff"  />
+    <file src="bmw_x7.txd" />
+    <file src="bmw_x7.dff"  />
 </meta>

@@ -1,0 +1,23 @@
+<meta>  
+    <script src = "c_wheels.lua" type ="client" />
+
+    <file src="wheel-textures.txd" />
+
+    <file src="ID_1025.dff"  />
+    <file src="ID_1073.dff"  />
+    <file src="ID_1074.dff"  />
+    <file src="ID_1075.dff"  />
+    <file src="ID_1076.dff"  />
+    <file src="ID_1077.dff"  />
+    <file src="ID_1078.dff"  />
+    <file src="ID_1079.dff"  />
+    <file src="ID_1080.dff"  />
+    <file src="ID_1081.dff"  />
+    <file src="ID_1082.dff"  />
+    <file src="ID_1083.dff"  />
+    <file src="ID_1084.dff"  />
+    <file src="ID_1085.dff"  />
+    <file src="ID_1096.dff"  />
+    <file src="ID_1097.dff"  />
+    <file src="ID_1098.dff"  />
+</meta>
