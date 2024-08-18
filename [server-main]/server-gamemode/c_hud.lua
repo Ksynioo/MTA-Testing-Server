@@ -22,37 +22,34 @@ addEventHandler("onClientResourceStart", root, hideOriginalHUD)
 function createHud()
 
     --Health
-    dxDrawCircle(sx*(80/1920), sy*(800/1080), 20, 0, 3.6*getElementHealth(localPlayer), tocolor(255, 0, 0, 255))
-    dxDrawCircle(sx*(80/1920), sy*(800/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(68/1920), sy*(789/1080), sx*(24/1920), sy*(24/1080), "img/heart.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    dxDrawCircle(sx*(680/1920), sy*(1045/1080), 20, 0, 3.6*getElementHealth(localPlayer), tocolor(255, 0, 0, 255))
+    dxDrawCircle(sx*(680/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(668/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/heart.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
     
-
     --Armor
-    dxDrawCircle(sx*(130/1920), sy*(740/1080), 20, 0, 3.6*getPedArmor(localPlayer), tocolor(0, 0, 255, 255))
-    dxDrawCircle(sx*(130/1920), sy*(740/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(118/1920), sy*(728/1080), sx*(24/1920), sy*(24/1080), "img/armor.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
-
+    dxDrawCircle(sx*(740/1920), sy*(1045/1080), 20, 0, 3.6*getPedArmor(localPlayer), tocolor(0, 0, 255, 255))
+    dxDrawCircle(sx*(740/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(728/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/armor.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
     --Hunger
-    dxDrawCircle(sx*(201/1920), sy*(700/1080), 20, 0, (getElementData(localPlayer,"food")) / 100 * 360, tocolor(150, 75, 0, 255))
-    dxDrawCircle(sx*(201/1920), sy*(700/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(189/1920), sy*(688/1080), sx*(24/1920), sy*(24/1080), "img/hunger.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    dxDrawCircle(sx*(800/1920), sy*(1045/1080), 20, 0, (getElementData(localPlayer,"food")) / 100 * 360, tocolor(150, 75, 0, 255))
+    dxDrawCircle(sx*(800/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(788/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/hunger.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
     --Thirst
-    dxDrawCircle(sx*(326/1920), sy*(700/1080), 20, 0, (getElementData(localPlayer,"thirst")) / 100 * 360, tocolor(0,255,255, 255))
-    dxDrawCircle(sx*(326/1920), sy*(700/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(314/1920), sy*(688/1080), sx*(24/1920), sy*(24/1080), "img/thirst.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    dxDrawCircle(sx*(860/1920), sy*(1045/1080), 20, 0, (getElementData(localPlayer,"thirst")) / 100 * 360, tocolor(0,255,255, 255))
+    dxDrawCircle(sx*(860/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(848/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/thirst.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
-    
     --Oxygen
-    dxDrawCircle(sx*(395/1920), sy*(740/1080), 20, 0, getPedOxygenLevel(localPlayer)*3.6/10, tocolor(119,192,216, 255))
-    dxDrawCircle(sx*(395/1920), sy*(740/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(383.5/1920), sy*(728/1080), sx*(24/1920), sy*(24/1080), "img/oxygen.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    dxDrawCircle(sx*(920/1920), sy*(1045/1080), 20, 0, getPedOxygenLevel(localPlayer)*3.6/10, tocolor(119,192,216, 255))
+    dxDrawCircle(sx*(920/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(908/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/oxygen.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
     --Stamina
-    dxDrawCircle(sx*(445/1920), sy*(800/1080), 20, 0, (getElementData(localPlayer,"stamina")) / 100 * 360, tocolor(255,255,0, 255))
-    dxDrawCircle(sx*(445/1920), sy*(800/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
-    dxDrawImage(sx*(432/1920), sy*(789/1080), sx*(24/1920), sy*(24/1080), "img/stamina.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+    dxDrawCircle(sx*(980/1920), sy*(1045/1080), 20, 0, (getElementData(localPlayer,"stamina")) / 100 * 360, tocolor(255,255,0, 255))
+    dxDrawCircle(sx*(980/1920), sy*(1045/1080), 15, 0, 360, tocolor(0, 0, 0, 255))
+    dxDrawImage(sx*(968/1920), sy*(1034/1080), sx*(24/1920), sy*(24/1080), "img/stamina.dds", 0, 0, 0, tocolor(255, 255, 255, 255), false)
     
     --Weapon
     local weapon = getPedWeapon(localPlayer)
@@ -63,12 +60,23 @@ function createHud()
 
     --Cash
     local money = getPlayerMoney(localPlayer)
-    dxDrawText("Cash:  $"..money, sx*(800/1920), sy*(2010/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
-    dxDrawText("Cash:  $"..money, sx*(800/1920), sy*(2010/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Cash:  $"..money, sx*(2000/1920), sy*(2010/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Cash:  $"..money, sx*(2000/1920), sy*(2010/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
 
     --Bank Money
-    dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
-    dxDrawText("Bank:  $"..bankaccount, sx*(800/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Bank:  $"..bankaccount, sx*(2000/1920), sy*(2070/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText("Bank:  $"..bankaccount, sx*(2000/1920), sy*(2070/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+
+    -- Clock
+    local timehour, timeminute = getTime()
+		if timehour < 10 then
+			timehour = "0"..timehour
+		end
+		if timeminute < 10 then
+			timeminute = "0"..timeminute
+    end
+    dxDrawText(timehour..":"..timeminute, sx*(850/1920), sy*(2050/1080), sx*(300/1920), sy*(50/1080), tocolor(0, 0, 0, 255), sx*(1.5/1920), "pricedown", "center", "center", false, false, false, false, false)
+    dxDrawText(timehour..":"..timeminute, sx*(850/1920), sy*(2050/1080), sx*(300/1920)-5, sy*(50/1080)-5, tocolor(255, 255, 255, 255), sx*(1.5/1920), "pricedown", "center", "center", false, false, false, false, false)
 
     --Speedometer & Gears
     local vehicle = getPedOccupiedVehicle(localPlayer)
@@ -80,23 +88,22 @@ function createHud()
         local zoneName = getZoneName(x, y, z)
         local currentGear  = getVehicleCurrentGear(vehicle)
 
-        dxDrawCircle(sx*(500/1920), sy*(950/1080), sx*(25/1920), 0, 360, tocolor(0, 0, 0, 100))
-        dxDrawCircle(sx*(500/1920), sy*(950/1080), sx*(20/1920), 0, 360, tocolor(0, 95, 106, 100))
-        dxDrawImage(sx*(489/1920), sy*(940/1080), sx*(24/1920), sy*(24/1080), "img/fuel.jpg", 0, 0, 0, tocolor(255, 255, 255, 255), false)
+        dxDrawCircle(sx*(1850/1920), sy*(1040/1080), sx*(25/1920), 0, 360, tocolor(0, 0, 0, 100))
+        dxDrawCircle(sx*(1850/1920), sy*(1040/1080), sx*(20/1920), 0, 360, tocolor(0, 95, 106, 100))
+        dxDrawImage(sx*(1838/1920), sy*(1028/1080), sx*(24/1920), sy*(24/1080), "img/fuel.jpg", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
-        dxDrawCircle(sx*(460/1920), sy*(890/1080), sx*(45/1920), 0, 360, tocolor(0, 0, 0, 100))
-        dxDrawCircle(sx*(460/1920), sy*(890/1080), sx*(40/1920), 0, 360, tocolor(150, 150, 150, 100))
 
-        dxDrawText(speed.." \nKM/H", sx*(-430/1920), sy*(1040/1080), sx*(1350/1920), sy*(735/1080), tocolor(254, 254, 254, 255), sx*(0.80/1920), "bankgothic", "center", "center", false, false, false, false, false)
+
+        dxDrawText(speed.." \nKM/H", sx*(1950/1920), sy*(1350/1080), sx*(1350/1920), sy*(735/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+        dxDrawText(speed.." \nKM/H", sx*(1950/1920), sy*(1350/1080), sx*(1350/1920)-5, sy*(735/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
         if zoneName then
-            dxDrawRectangle(sx*(680/1920), sy*(1010/1080), sx*(485/1920), sy*(50/1080), tocolor(0, 0, 0, 100), false)
-            dxDrawRectangle(sx*(685/1920), sy*(1015/1080), sx*(475/1920), sy*(40/1080), tocolor(100, 100, 100, 100), false)
-            dxDrawText(zoneName.."", sx*(650/1920), sy*(1455/1080), sx*(1194/1920), sy*(612/1080), tocolor(255, 255, 255, 255), sx*(1.00/1920), "bankgothic", "center", "center", false, false, false, false, false)
+            dxDrawText(zoneName.."", sx*(1670/1920), sy*(1470/1080), sx*(1194/1920), sy*(612/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
+            dxDrawText(zoneName.."", sx*(1670/1920), sy*(1470/1080), sx*(1194/1920)-5, sy*(612/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
         end
         if currentGear then
-            dxDrawCircle(sx*(420/1920), sy*(950/1080), sx*(25/1920), 0, 360, tocolor(0, 0, 0, 100))
-            dxDrawCircle(sx*(420/1920), sy*(950/1080), sx*(20/1920), 0, 360, tocolor(150, 150, 150, 100))
-            dxDrawText(currentGear.."", sx*(-352/1920), sy*(1287/1080), sx*(1194/1920), sy*(612/1080), tocolor(255, 255, 255, 255), sx*(1.00/1920), "bankgothic", "center", "center", false, false, false, false, false)
+
+            dxDrawText("Gear:  "..currentGear, sx*(2305/1920), sy*(1475/1080), sx*(1194/1920), sy*(612/1080), tocolor(0, 0, 0, 255), sx*(1.00/1920), "pricedown", "center", "center", false, false, false, false, false)
+            dxDrawText("Gear:  "..currentGear, sx*(2305/1920), sy*(1475/1080), sx*(1194/1920)-5, sy*(612/1080)-5, tocolor(255, 255, 255, 255), sx*(1.00/1920), "pricedown", "center", "center", false, false, false, false, false)
         end
     end
     
