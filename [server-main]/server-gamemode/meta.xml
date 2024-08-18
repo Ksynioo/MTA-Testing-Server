@@ -9,6 +9,7 @@
     <script src = "s_commands.lua" type="server" />
     <script src = "s_gamemode.lua" type="server" />
     <script src ="s_account_data.lua" type="server" />
+    <script src ="s_database.lua" type="server" />
 
 <!--Script Files-->
     <file src = "img/health.jpg" />
@@ -19,6 +20,8 @@
     <file src = "img/stamina.jpg" />
     <file src = "img/bloodscreen.jpg" />
     <file src = "img/fuel.jpg" />
+    <file src = "files/muscular.ifp" />
+    <file src = "files/ped.ifp" />
 </meta>
 
     

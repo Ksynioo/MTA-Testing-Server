@@ -238,3 +238,14 @@ function changeWeather(player, command, weatherID)
 	setWeather(weatherID)
 end
 addCommandHandler("weather", changeWeather, true, false)
+
+--[[Set Player Fightstyle]]--
+function setFightStyle ( player, commandName, id )
+	if player and id then                                                     
+		local status = setPedFightingStyle ( player, tonumber(id) )       
+		if not status then                                              
+			outputConsole ( "Failed to set fighting style.", player ) 
+		end
+	end
+end
+addCommandHandler ( "fs",  setFightStyle)
