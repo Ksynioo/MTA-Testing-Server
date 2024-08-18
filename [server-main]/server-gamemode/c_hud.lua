@@ -92,8 +92,6 @@ function createHud()
         dxDrawCircle(sx*(1850/1920), sy*(1040/1080), sx*(20/1920), 0, 360, tocolor(0, 95, 106, 100))
         dxDrawImage(sx*(1838/1920), sy*(1028/1080), sx*(24/1920), sy*(24/1080), "img/fuel.jpg", 0, 0, 0, tocolor(255, 255, 255, 255), false)
 
-
-
         dxDrawText(speed.." \nKM/H", sx*(1950/1920), sy*(1350/1080), sx*(1350/1920), sy*(735/1080), tocolor(0, 0, 0, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
         dxDrawText(speed.." \nKM/H", sx*(1950/1920), sy*(1350/1080), sx*(1350/1920)-5, sy*(735/1080)-5, tocolor(255, 255, 255, 255), sx*(1.0/1920), "pricedown", "center", "center", false, false, false, false, false)
         if zoneName then
