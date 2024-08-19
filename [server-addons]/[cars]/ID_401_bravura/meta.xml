@@ -1,0 +1,6 @@
+<meta>
+    <script src = "handling.lua" type ="server" />
+    <script src = "client.lua" type ="client" />
+    <file src="bentley_brooklands.txd" />
+    <file src="bentley_brooklands.dff"  />
+</meta>
