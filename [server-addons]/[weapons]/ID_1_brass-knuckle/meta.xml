@@ -1,0 +1,5 @@
+<meta>
+	<file src="brassknuckle.txd" />
+	<file src="brassknuckle.dff" />
+	<script src="client.lua" type="client" />
+</meta>
